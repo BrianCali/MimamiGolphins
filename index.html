@@ -1,0 +1,37 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+    <title>GameJam</title>
+	<script type="text/javascript" src="src/phaser.min.js"></script>
+	<script src="src/boot.js"></script>
+	<script src="src/preload.js"></script>
+	<script src="src/gametitle.js"></script>
+	<script src="src/thegame.js"></script>
+	<script src="src/gameover.js"></script>	
+	<script src="src/bullet.js"></script>
+	<script src="src/enemy.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(896, 504, Phaser.AUTO, '');
+
+game.state.add("Boot",boot);
+game.state.add("Preload",preload);
+game.state.add("GameTitle",gameTitle);
+game.state.add("TheGame",theGame);
+game.state.add("GameOver",gameOver);
+game.state.start("Boot");
+
+
+</script>
+
+</body>
+</html>
